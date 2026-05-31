@@ -187,3 +187,53 @@
         margin-top: 10px;
     }
 }
+
+html, body {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+.page,
+.container,
+.main-wrapper,
+.content,
+.sidebar,
+.post,
+.block {
+    max-width: 100%;
+    overflow-x: hidden;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+table,
+pre,
+code {
+    max-width: 100%;
+    overflow-x: auto;
+    display: block;
+}
+
+/* Для телефонов (≤ 768px) */
+@media screen and (max-width: 768px) {
+    .page,
+    .container {
+        width: 100%;
+        min-width: 0;
+        padding: 0 10px;
+        box-sizing: border-box;
+    }
+
+    * {
+        max-width: 100%;
+        box-sizing: border-box;
+    }
+
+    body {
+        word-wrap: break-word;
+        overflow-wrap: break-word;
+    }
+}
