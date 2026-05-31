@@ -1,239 +1,83 @@
-/* responsive.css – адаптация для планшетов и мобильных устройств */
+/* responsive.css - адаптация для мобильных устройств */
 
-/* Базовые настройки для всех экранов */
-* {
-    box-sizing: border-box;
-}
-
-/* === Планшеты и небольшие ноутбуки (≤ 1024px) === */
+/* Планшеты и маленькие ноутбуки (ширина меньше 1024px) */
 @media screen and (max-width: 1024px) {
-    .page {
-        width: 95%;
-        max-width: 1000px;
-        margin: 0 auto;
+    .wrapper {
+        width: 90%;
+        min-width: auto;
     }
 
     .content {
-        gap: 6px;
-        padding: 0 5px 20px 5px;
+        width: 60%;
     }
 
-    .header {
-        background-size: cover;
-    }
-
-    .search-top {
-        right: 20px;
-    }
-
-    .search-top input {
-        width: 180px;
+    .sidebar {
+        margin-left: 63%;
     }
 }
 
-/* === Мобильные устройства (≤ 768px) === */
+/* Мобильные устройства (ширина меньше 768px) */
 @media screen and (max-width: 768px) {
     body {
-        font-size: 14px; 
-        min-width: 0;    
+        min-width: auto;
+        font-size: 0.9em;
     }
 
-    .page {
-        width: 100%;
-        padding: 0 10px;
-    }
-
-    .content {
-        display: flex;
-        flex-direction: column;
-        gap: 16px;
-    }
-
-    .post {
-        width: 100%;
-    }
-
-    .sidebar-column {
-        width: 100%;
-        gap: 16px;
+    .wrapper {
+        width: 95%;
+        min-width: auto;
     }
 
     .header {
-        height: auto;
-        min-height: 280px;
-        text-align: center;
-        background-position: center top;
-        position: relative;
-    }
-
-    .site-title {
-        position: static;
-        padding-top: 140px;
-        font-size: 28px;
         text-align: center;
     }
 
-    .site-description {
-        position: static;
-        font-size: 16px;
-        margin-top: 5px;
-        text-align: center;
+    .logo-block {
+        float: none;
+        margin-bottom: 1em;
     }
 
-    .search-top {
-        position: static;
-        margin-top: 20px;
-        text-align: center;
+    .content,
+    .sidebar {
+        width: 100%;
+        margin-left: 0;
+        float: none;
     }
 
-    .search-top input {
-        width: 80%;
-        max-width: 260px;
-        height: 36px;
-        font-size: 14px;
-    }
-
-    .post-inner {
-        flex-direction: column;
-        align-items: center;
-        text-align: center;
+    .post h1 {
+        font-size: 1.4em;
     }
 
     .post-date {
-        margin: 0 auto 15px;
+        font-size: 0.9em;
+        text-align: left;
     }
 
-    .post-title {
-        font-size: 20px;
+    .post-meta {
+        font-size: 0.85em;
     }
 
-    .post-body {
-        font-size: 14px;
-        line-height: 1.5;
+    .sidebar .widget {
+        margin-bottom: 1.5em;
     }
 
-    .sidebar-content a,
-    .sidebox-content a {
-        display: inline-block;
-        padding: 8px 0;
-        font-size: 14px;
+    .sidebar ul {
+        padding-left: 1em;
     }
 
-    .sidebar-content li,
-    .sidebox-content li {
-        margin-bottom: 8px;
-    }
-
-    .search-form input {
-        width: 90%;
-        height: 36px;
-        font-size: 14px;
-    }
-
-    .search-form button {
-        padding: 6px 16px;
-        font-size: 14px;
-    }
-}
-
-/* === Маленькие телефоны (≤ 480px) === */
-@media screen and (max-width: 480px) {
-    body {
-        font-size: 13px;
-    }
-
-    .site-title {
-        font-size: 24px;
-        padding-top: 100px;
-    }
-
-    .site-description {
-        font-size: 14px;
-    }
-
-    .post-title {
-        font-size: 18px;
-    }
-
-    .post-body {
-        font-size: 13px;
-    }
-
-    .sidebar-title {
-        font-size: 16px;
-        padding: 12px 8px;
-    }
-
-    .sidebar-content {
-        padding: 12px;
-    }
-
-    .post-inner {
-        padding: 12px;
-    }
-}
-
-/* === Альбомная ориентация на телефонах (до 768px и высота меньше ширины) === */
-@media screen and (max-width: 768px) and (orientation: landscape) {
-    .header {
-        min-height: 240px;
-    }
-
-    .site-title {
-        padding-top: 70px;
-    }
-
-    .search-top {
-        margin-top: 10px;
-    }
-}
-
-html, body {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-.page,
-.container,
-.main-wrapper,
-.content,
-.sidebar,
-.post,
-.block {
-    max-width: 100%;
-    overflow-x: hidden;
-}
-
-img {
-    max-width: 100%;
-    height: auto;
-}
-
-table,
-pre,
-code {
-    max-width: 100%;
-    overflow-x: auto;
-    display: block;
-}
-
-/* Для телефонов (≤ 768px) */
-@media screen and (max-width: 768px) {
-    .page,
-    .container {
+    .search-form input[type="text"] {
         width: 100%;
-        min-width: 0;
+        padding: 8px;
+        box-sizing: border-box;
+    }
+
+    .promo-block {
+        text-align: center;
+        padding: 10px;
+    }
+
+    .wrapper {
         padding: 0 10px;
         box-sizing: border-box;
-    }
-
-    * {
-        max-width: 100%;
-        box-sizing: border-box;
-    }
-
-    body {
-        word-wrap: break-word;
-        overflow-wrap: break-word;
     }
 }
