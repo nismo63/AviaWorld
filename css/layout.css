@@ -1,0 +1,251 @@
+/* layout.css */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: Arial, Helvetica, sans-serif;
+    background: #1a3445;
+    color: #111;
+    font-size: 12px;
+}
+
+/* Основной контейнер */
+
+.page{
+    width:1000px;
+    margin:auto;
+}
+
+/* Шапка */
+
+.header {
+    height: 450px;
+    background-image: url("../image/banner.jpg");
+    background-repeat: no-repeat;
+    background-position: left top;
+    position: relative;
+}
+
+/* Название сайта */
+
+.site-title {
+    position: absolute;
+    left: 20px;
+    top: 160px;
+    font-size: 34px;
+    font-weight: normal;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .45);
+}
+
+/* Подзаголовок */
+
+.site-description {
+    position: absolute;
+    left: 86px;
+    top: 210px;
+    font-size: 18px;
+    color: white;
+    text-shadow: 0 1px 4px rgba(0, 0, 0, .45);
+}
+
+/* Поиск сверху */
+
+.search-top{
+    position:absolute;
+    top:64px;
+    right:110px;
+}
+
+.search-top input {
+    width: 210px;
+    height: 23px;
+    padding: 2px 8px;
+    border: 1px solid #cbd5df;
+    background: #fff;
+    color: #333;
+    font-size: 11px;
+}
+
+/* Контент */
+
+.content{
+    display:grid;
+    grid-template-columns: 580px 190px 190px;
+    gap:8px;
+    align-items:start;
+    padding: 0 10px 26px 10px;
+}
+
+/* Статья */
+
+.post {
+    background: #c8dbe8;
+}
+
+.post-inner {
+    padding: 16px 15px 15px;
+}
+
+/* Дата */
+
+.post-date {
+    position: relative;
+    width: 60px;
+    height: 55px;
+    margin-right: 15px;
+    text-align: center;
+}
+
+.post-date img {
+    width: 60px;
+    height: 55px;
+}
+
+.day,
+.month {
+    display: block;
+    position: absolute;
+    width: 100%;
+    text-align: center;
+    color: white;
+    font-weight: bold;
+}
+
+.day {
+    top: 10px;
+    font-size: 20px;
+}
+
+.month {
+    bottom: 9px;
+    font-size: 9px;
+}
+
+/* Заголовок статьи */
+
+.post-title {
+    margin-bottom: 3px;
+    font-size: 22px;
+}
+
+/* Мета-информация */
+
+.post-meta {
+    margin-bottom: 20px;
+}
+
+.post-meta a {
+    color: #004080;
+    text-decoration: none;
+}
+
+/* Текст статьи */
+
+.post-body {
+    line-height: 1.45;
+    margin-bottom: 18px;
+}
+
+/* Низ статьи */
+
+.post-footer {
+    text-align:right;
+}
+
+/* Колонки справа */
+
+.sidebar-column{
+    display:flex;
+    flex-direction:column;
+    gap:12px;
+}
+
+/* Блоки */
+
+.sidebar,
+.sidebox {
+    background: #c8dbe8;
+}
+
+/* Заголовок блока */
+
+.sidebar-title,
+.sidebox-title {
+    background-image: url("../image/sidebar_title.png");
+    background-repeat: repeat-x;
+    color: black;
+    font-weight: bold;
+    padding: 9px 10px 8px;
+    min-height: 29px;
+}
+
+/* Контент блока */
+
+.sidebar-content,
+.sidebox-content {
+    padding: 13px 13px 17px;
+    min-height: 45px;
+}
+
+.sidebar-content ul,
+.sidebox-content ul {
+    list-style: none;
+}
+
+.sidebar-content li,
+.sidebox-content li {
+    margin-bottom: 10px;
+}
+
+.sidebar-content a,
+.sidebox-content a {
+    color: #004080;
+    text-decoration: none;
+}
+
+/* Поиск в сайдбаре */
+
+.search-form input {
+    width: 116px;
+    height: 22px;
+    padding: 2px 5px;
+    margin: 0 auto 6px;
+    display:block;
+    border: 1px solid #b8c4ce;
+}
+
+.search-form button {
+    display:block;
+    margin:auto;
+    padding: 2px 10px;
+    cursor: pointer;
+}
+
+/* Адаптивность */
+
+@media (max-width: 1200px) {
+    .page {
+        width: 1000px;
+    }
+
+    .content {
+        grid-template-columns: 580px 190px 190px;
+    }
+}
+
+@media (max-width: 900px) {
+    .content {
+        grid-template-columns: 1fr;
+    }
+    .site-title {
+        font-size: 42px;
+    }
+    .site-description {
+        font-size: 18px;
+    }
+}

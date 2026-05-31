@@ -1,0 +1,22 @@
+/* css/images.css */
+
+.post-top{
+    height:15px;
+    background:
+    url("../image/post_top.png")
+    repeat-x left top;
+}
+
+.post-bottom{
+    height:20px;
+    background:
+    url("../image/post_bottom.png")
+    repeat-x left top;
+}
+
+.sidebar-box-bottom{
+    height:15px;
+    background:
+    url("../image/sidebar_box_bottom.png")
+    repeat-x left top;
+}

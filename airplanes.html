@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AviaWorld - Самолёты мира</title>
+
+    <style>
+        body {
+            background-color: #1a2b36;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        .container {
+            width: 960px;
+            margin: 0 auto;
+        }
+
+        .header {
+            background: url('image/planes.png') no-repeat center;
+            background-size: cover;
+            height: 300px;
+            position: relative;
+            border-bottom: 5px solid #555;
+        }
+
+        .logo {
+            position: absolute;
+            bottom: 20px;
+            left: 30px;
+            color: #fff;
+            text-shadow: 2px 2px 4px #000;
+        }
+
+        .logo h1 {
+            margin: 0;
+            font-size: 36px;
+        }
+
+        .logo p {
+            margin: 5px 0 0;
+            font-size: 18px;
+        }
+
+        .search-box {
+            position: absolute;
+            top: 20px;
+            right: 20px;
+            background: rgba(255,255,255,0.8);
+            padding: 5px 10px;
+            border-radius: 5px;
+        }
+
+        .main-wrapper {
+            display: flex;
+            margin-top: 10px;
+        }
+
+        .content {
+            width: 65%;
+            padding-right: 15px;
+        }
+
+        .sidebar {
+            width: 35%;
+        }
+
+        .block {
+            background: linear-gradient(to bottom, #eef2f5, #dce6ed);
+            border: 1px solid #aab;
+            margin-bottom: 15px;
+        }
+
+        .block-header {
+            padding: 8px 10px;
+            font-weight: bold;
+            background: linear-gradient(to bottom, #eef2f5, #cdd8e3);
+            border-bottom: 1px solid #ccc;
+            color: #2c3e50;
+        }
+
+        .block-content {
+            padding: 10px;
+            font-size: 13px;
+        }
+
+        .post-title {
+            font-size: 18px;
+            color: #8b1a1a;
+            text-decoration: none;
+            font-weight: bold;
+        }
+
+        .post-title:hover {
+            text-decoration: underline;
+        }
+
+        .review-item {
+            border-bottom: 1px dashed #999;
+            margin-bottom: 10px;
+            padding-bottom: 10px;
+        }
+
+        .review-meta {
+            font-size: 11px;
+            color: #666;
+        }
+
+        .review-score {
+            font-weight: bold;
+            color: #27ae60;
+        }
+
+        .sidebar a {
+            display: block;
+            padding: 3px 0;
+            text-decoration: none;
+            color: #2c3e50;
+        }
+
+        .sidebar a:hover {
+            color: #8b1a1a;
+            text-decoration: underline;
+        }
+
+        .footer {
+            text-align: center;
+            padding: 10px;
+            color: #ccc;
+            font-size: 12px;
+            border-top: 1px solid #333;
+            margin-top: 10px;
+        }
+
+        /* АДАПТИВ */
+        @media (max-width: 920px) {
+            .container { width: 100%; padding: 0 10px; }
+            .main-wrapper { flex-direction: column; }
+            .content, .sidebar { width: 100%; }
+        }
+    </style>
+</head>
+
+<body>
+
+<div class="container">
+
+    <!-- HEADER -->
+    <div class="header">
+        <div class="logo">
+            <h1>AviaWorld</h1>
+            <p>Самолёты и технологии неба</p>
+        </div>
+
+        <div class="search-box">
+            <input type="text" placeholder="Поиск самолётов...">
+        </div>
+    </div>
+
+    <!-- MAIN -->
+    <div class="main-wrapper">
+
+        <!-- CONTENT -->
+        <div class="content">
+
+            <div class="block">
+                <div class="block-header">Гражданская авиация</div>
+
+                <div class="block-content">
+
+                    <div class="review-item">
+                        <a href="#" class="post-title">Boeing 747 — легенда неба</a>
+                        <div class="review-meta">Тип: пассажирский | Дальность: 13 000 км</div>
+                        <p>Один из самых известных широкофюзеляжных самолётов в истории авиации.</p>
+                        <div class="review-score">Макс. скорость: 920 км/ч</div>
+                    </div>
+
+                    <div class="review-item">
+                        <a href="#" class="post-title">Airbus A320</a>
+                        <div class="review-meta">Тип: пассажирский | Экономичный лайнер</div>
+                        <p>Самый популярный самолёт в мире для коротких и средних рейсов.</p>
+                        <div class="review-score">Надёжность: высокая</div>
+                    </div>
+
+                    <div class="review-item">
+                        <a href="#" class="post-title">Су-57</a>
+                        <div class="review-meta">Тип: истребитель | Россия</div>
+                        <p>Современный российский многофункциональный истребитель пятого поколения.</p>
+                        <div class="review-score">Скорость: до 2600 км/ч</div>
+                    </div>
+
+                </div>
+            </div>
+
+        </div>
+
+        <!-- SIDEBAR -->
+        <div class="sidebar">
+
+            <div class="block">
+                <div class="block-header">Страницы</div>
+                <div class="block-content">
+                    <a href="index.html">Главная</a>
+                    <a href="Самолёты.html">Самолёты мира</a>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="block-header">Категории</div>
+                <div class="block-content">
+                    <a href="#">Гражданские</a>
+                    <a href="#">Военные</a>
+                </div>
+            </div>
+
+            <div class="block">
+                <div class="block-header">Архив</div>
+                <div class="block-content">
+                    <a href="#">2026</a>
+                </div>
+            </div>
+
+        </div>
+
+    </div>
+
+    <!-- FOOTER -->
+    <div class="footer">
+        © 2026 AviaWorld — авиационный проект
+    </div>
+
+</div>
+
+</body>
+</html>

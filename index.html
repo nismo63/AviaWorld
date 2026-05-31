@@ -1,0 +1,139 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AviaWorld.ru</title>
+    <link rel="stylesheet" href="css/layout.css">
+    <link rel="stylesheet" href="css/image.css">
+    <link rel="stylesheet" href="css/text.css">
+</head>
+<body>
+    <div class="page">
+        <header class="header">
+            <div class="site-title">AviaWorld.ru</div>
+            <div class="site-description">Мир авиации и современных летательных технологий.</div>
+            <form class="search-top" action="#" method="get">
+                <input type="text" placeholder="Что-нибудь найти?">
+            </form>
+        </header>
+
+        <main class="content">
+            <article class="post">
+                <div class="post-top"></div>
+                <div class="post-inner">
+                    <div class="post-date">
+                        <img src="image/post_date.gif" alt="Дата">
+                        <span class="day" id="currentDay"></span>
+                        <span class="month" id="currentMonth"></span>
+                    </div>
+                    <div class="post-content">
+                        <h1 class="post-title">Доброго времени суток!</h1>
+                        <div class="post-meta">
+                            Категория:
+                            <a href="#">Самолёты</a>
+                            <span>|</span>
+                            Автор:
+                            <a href="#">nismodell</a>
+                        </div>
+                        <div class="post-body">
+                            Добро пожаловать на AviaWorld. Здесь собрана информация о различном авиатранспорте.
+                        </div>
+
+                        <div class="post-footer">
+                            Комментарии:
+                            <a href="#">5</a>
+                            <span>|</span>
+                            <a href="#">Оставить комментарий</a>
+                        </div>
+                    </div>
+                </div>
+                <div class="post-bottom"></div>
+            </article>
+
+            <aside class="sidebar-column">
+                <section class="sidebar">
+                    <div class="post-top"></div>
+                    <div class="sidebar-title">Страницы</div>
+                    <div class="sidebar-content">
+                        <ul>
+                            <li><a href="index.html">Главная</a></li>
+                            <li><a href="airplanes.html">Самолёты мира</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box-bottom"></div>
+                </section>
+
+                <section class="sidebar">
+                    <div class="post-top"></div>
+                    <div class="sidebar-title">Категории</div>
+                    <div class="sidebar-content">
+                        <ul>
+                            <li><a href="#">Авиастроение</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box-bottom"></div>
+                </section>
+
+                <section class="sidebar search">
+                    <div class="post-top"></div>
+                    <div class="sidebar-title">Найти самолёт</div>
+                    <div class="sidebar-content search-form">
+                        <form action="#">
+                            <input type="text" aria-label="Поиск">
+                            <button type="submit">Поиск</button>
+                        </form>
+                    </div>
+                    <div class="sidebar-box-bottom"></div>
+                </section>
+
+                <section class="sidebar">
+                    <div class="post-top"></div>
+                    <div class="sidebar-title">Свежие записи</div>
+                    <div class="sidebar-content">
+                        <ul>
+                            <li><a href="#">Авиакатастрофы</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box-bottom"></div>
+                </section>
+            </aside>
+
+            <aside class="sidebar-column">
+                <section class="sidebar">
+                    <div class="post-top"></div>
+                    <div class="sidebar-title">Архивы</div>
+                    <div class="sidebar-content">
+                        <ul>
+                            <li><a href="#">Май 2026</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box-bottom"></div>
+                </section>
+
+                <section class="sidebar">
+                    <div class="post-top"></div>
+                    <div class="sidebar-title">Ссылки</div>
+                    <div class="sidebar-content links-content">
+                        <ul>
+                            <li><a href="airplanes.html">Виды самолётов</a></li>
+                        </ul>
+                    </div>
+                    <div class="sidebar-box-bottom"></div>
+                </section>
+            </aside>
+        </main>
+    </div>
+    <script>
+        var currentDate = new Date();
+        var day = currentDate.getDate();
+        var monthNames = [
+            'ЯНВ','ФЕВ','МАР','АПР','МАЙ','ИЮН',
+            'ИЮЛ','АВГ','СЕН','ОКТ','НОЯ','ДЕК'
+        ];
+        var month = monthNames[currentDate.getMonth()];
+        document.getElementById('currentDay').textContent = day;
+        document.getElementById('currentMonth').textContent = month;
+    </script>
+</body>
+</html>
