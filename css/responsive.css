@@ -1,0 +1,113 @@
+/* responsive.css - адаптация для мобильных устройств */
+
+/* Планшеты и небольшие ноутбуки */
+@media screen and (max-width: 1024px) {
+
+
+.page {
+    width: 95%;
+}
+
+.content {
+    grid-template-columns: 1fr 180px 180px;
+}
+
+.header {
+    background-size: cover;
+}
+
+}
+
+/* Планшеты */
+@media screen and (max-width: 768px) {
+
+body {
+    font-size: 0.95em;
+}
+
+.page {
+    width: 100%;
+}
+
+.content {
+    grid-template-columns: 1fr;
+}
+
+.sidebar-column {
+    width: 100%;
+}
+
+.header {
+    height: 350px;
+    background-size: cover;
+}
+
+.site-title {
+    font-size: 28px;
+    left: 20px;
+    top: 140px;
+}
+
+.site-description {
+    font-size: 16px;
+    left: 20px;
+    top: 185px;
+}
+
+.search-top {
+    top: 20px;
+    right: 20px;
+}
+
+}
+
+/* Мобильные телефоны */
+@media screen and (max-width: 480px) {
+
+.page {
+    width: 100%;
+}
+
+.header {
+    height: 250px;
+}
+
+.site-title {
+    font-size: 22px;
+    left: 10px;
+    top: 110px;
+}
+
+.site-description {
+    font-size: 13px;
+    left: 10px;
+    top: 145px;
+}
+
+.search-top {
+    position: static;
+    padding: 10px;
+    text-align: center;
+}
+
+.search-top input {
+    width: 90%;
+}
+
+.post-inner {
+    flex-direction: column;
+}
+
+.post-date {
+    margin: 0 auto 10px;
+}
+
+.post-title {
+    font-size: 18px;
+}
+
+.sidebar-content {
+    padding: 10px;
+}
+
+}
