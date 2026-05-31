@@ -8,7 +8,7 @@
     }
 
     .content {
-        width: 60%;
+        width: 60%; 
     }
 
     .sidebar {
@@ -20,7 +20,7 @@
 @media screen and (max-width: 768px) {
     body {
         min-width: auto;
-        font-size: 0.9em;
+        font-size: 0.9em; 
     }
 
     .wrapper {
@@ -37,47 +37,15 @@
         margin-bottom: 1em;
     }
 
-    .content,
+    .content {
+        width: 100%;
+        float: none;
+        margin-bottom: 2em;
+    }
+
     .sidebar {
         width: 100%;
-        margin-left: 0;
         float: none;
-    }
-
-    .post h1 {
-        font-size: 1.4em;
-    }
-
-    .post-date {
-        font-size: 0.9em;
-        text-align: left;
-    }
-
-    .post-meta {
-        font-size: 0.85em;
-    }
-
-    .sidebar .widget {
-        margin-bottom: 1.5em;
-    }
-
-    .sidebar ul {
-        padding-left: 1em;
-    }
-
-    .search-form input[type="text"] {
-        width: 100%;
-        padding: 8px;
-        box-sizing: border-box;
-    }
-
-    .promo-block {
-        text-align: center;
-        padding: 10px;
-    }
-
-    .wrapper {
-        padding: 0 10px;
-        box-sizing: border-box;
+        margin-left: 0;
     }
 }
